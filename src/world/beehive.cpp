@@ -210,11 +210,13 @@ int Beehive::checkMinimumTotalResourcesDemanded(int demand) {
             pollen = demand;
     }
     res_cond.notify_all();
-    if(nectar < pollen)
+    if (nectar < pollen)
         return nectar;
-    else if(nectar > pollen)
+    else if (nectar > pollen)
         return pollen;
-    else if(nectar == pollen)
+    else if (nectar == pollen)
+        return nectar;
+    else
         return nectar;
 }
 
