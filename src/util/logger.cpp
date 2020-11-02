@@ -1,4 +1,5 @@
 #include "logger.h"
+#include <string>
 
 using std::endl;
 using std::mutex;
